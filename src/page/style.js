@@ -3,14 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export const PageWrapper = styled.div`
-
+    display: flex;
+    flex-direction: column;
 `
 
 export const NavigationBar = styled.div`
-    position: absolute:
     top: 0px;
     display: flex;
     padding: 10px;
+    background-color: #91f2ff;
 `
 
 export const Link = styled.a`
@@ -29,7 +30,7 @@ export const ImageSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -43,18 +44,24 @@ export const Portrait = styled.img`
     max-width: 200px;
     border-radius: 50%;
     align-self: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 `
 
 export const HeaderText = styled.div`
     text-align: center;
-    font-size: 30px;
+    font-size: 45px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 `
 
 export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #383838;
 `
 
 export const Content = styled.div`
@@ -65,6 +72,8 @@ export const ContactSectionWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    background-color: #3102a8;
+    color: white;
 `
 
 export const ContactWrapper = styled.div`
@@ -72,10 +81,10 @@ export const ContactWrapper = styled.div`
 `
 
 export const StyledLink = styled.a`
-    color: black;
-    height: 30px;
+    text-decoration: none;
+    color: inherit;
     &:hover {
-        color: #636363;
+        color: #bdbbbb
     }
 `
 
