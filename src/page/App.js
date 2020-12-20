@@ -1,8 +1,18 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  faEnvelope,
+  faFile,
+} from '@fortawesome/free-solid-svg-icons'
+
+
 import {
   PageWrapper,
   NavigationBar,
   Link,
-  Header,
   HeaderText,
   ContentWrapper,
   ContactWrapper,
@@ -10,6 +20,7 @@ import {
   Portrait,
   Content
 } from "./style.js"
+
 
 import clouds from "../clouds.jpg"
 import foliage from "../foliage.jpg"
@@ -42,7 +53,13 @@ export const App = () => {
       </ContentWrapper>
       <ImageSection image={foliage}/>
       <ContactWrapper>
+        <FontAwesomeIcon icon={faGithub} />
         <a href="https://github.com/mheavey18">mheavey18</a>
+        <FontAwesomeIcon icon={faEnvelope} />
+        martyheavey@yahoo.com
+        <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faFile} />
+
 
       </ContactWrapper>
     </PageWrapper>

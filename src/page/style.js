@@ -52,5 +52,5 @@ export const Content = styled.div`
 `
 
 export const ContactWrapper = styled.div`
-    
+    padding: 20px;
 `
