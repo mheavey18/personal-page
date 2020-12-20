@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export const PageWrapper = styled.div`
 
@@ -8,18 +10,26 @@ export const NavigationBar = styled.div`
     position: absolute:
     top: 0px;
     display: flex;
+    padding: 10px;
 `
 
-export const Link = styled.div`
+export const Link = styled.a`
     padding: 15px;
     margin-right: 15px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 `
 
 export const ImageSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -51,6 +61,24 @@ export const Content = styled.div`
     font-size: 20px;
 `
 
+export const ContactSectionWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+`
+
 export const ContactWrapper = styled.div`
     padding: 20px;
+`
+
+export const StyledLink = styled.a`
+    color: black;
+    height: 30px;
+    &:hover {
+        color: #636363;
+    }
+`
+
+export const StyledIcon = styled(FontAwesomeIcon)`
+
 `
