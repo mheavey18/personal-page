@@ -11,7 +11,7 @@ export const NavigationBar = styled.div`
     top: 0px;
     display: flex;
     padding: 10px;
-    background-color: #91f2ff;
+    ${props => `background-color: ${props.theme.headerColor};`}
 `
 
 export const Link = styled.a`
@@ -30,7 +30,7 @@ export const ImageSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -62,6 +62,7 @@ export const ContentWrapper = styled.div`
     padding-left: 80px;
     padding-right: 80px;
     color: #383838;
+    ${props => `background-color: ${props.theme.contentColor};`}
 `
 
 export const Content = styled.div`
@@ -72,7 +73,7 @@ export const ContactSectionWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: #3102a8;
+    ${props => `background-color: ${props.theme.footerColor};`}
     color: white;
 `
 
@@ -90,4 +91,11 @@ export const StyledLink = styled.a`
 
 export const StyledIcon = styled(FontAwesomeIcon)`
 
+`
+
+export const ImageText = styled.div`
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px 5px #000000;
 `

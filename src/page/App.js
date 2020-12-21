@@ -24,6 +24,7 @@ import {
     ContactWrapper,
     StyledLink,
     StyledIcon,
+    ImageText,
 } from "./style.js"
 
 import DropdownMenu from "../dropdown"
@@ -32,6 +33,7 @@ import portrait from "../images/square_crop.jpg"
 
 export const App = () => {
     const initialTheme = themes[Math.floor((Math.random() * Object.keys(themes).length) + 1)]
+    console.log(initialTheme)
     const [theme, setTheme] = useState(initialTheme)
 
     return (
@@ -62,7 +64,11 @@ export const App = () => {
                         sports, politics, and building things.
                     </Content>
                 </ContentWrapper>
-                <ImageSection image={theme.image2}/>
+                <ImageSection image={theme.image2}>
+                    <ImageText>
+                        Try refreshing the page or choosing a theme from the drop-down at the top of the page.
+                    </ImageText>
+                </ImageSection>
                 <ContactSectionWrapper id="contactinfo">
                     <ContactWrapper>
                         {"GitHub: "}

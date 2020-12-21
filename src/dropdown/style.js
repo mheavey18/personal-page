@@ -37,12 +37,11 @@ export const UnorderedList = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #91f2ff;
+    ${props => `background-color: ${props.theme.headerColor};`}
     border-radius: 5px;
 `
 
 export const ListItem = styled.li`
-    border-bottom: 1px solid #dddddd;
     padding: 10px;
     border-radius: 5px;
     &:hover {
