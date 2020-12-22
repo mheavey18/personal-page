@@ -2,7 +2,7 @@
   "name": "website-new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://martyheavey.com",
+  "homepage": "https://www.martyheavey.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
