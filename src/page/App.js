@@ -33,7 +33,6 @@ import portrait from "../images/square_crop.jpg"
 
 export const App = () => {
     const initialTheme = themes[Math.floor((Math.random() * Object.keys(themes).length) + 1)]
-    console.log(initialTheme)
     const [theme, setTheme] = useState(initialTheme)
 
     return (
@@ -47,8 +46,6 @@ export const App = () => {
                         Contact Info
                     </Link>
                     <DropdownMenu setTheme={setTheme}/>
-                    {console.log(theme)}
-                    {/* TODO: add different styles for website */}
                 </NavigationBar>
                 <ImageSection image={theme.image1}>
                     <HeaderText>
