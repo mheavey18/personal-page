@@ -78,7 +78,7 @@ export const ContactSectionWrapper = styled.div`
 `
 
 export const ContactWrapper = styled.div`
-    padding: 20px;
+    text-align: center;
 `
 
 export const StyledLink = styled.a`
@@ -98,4 +98,6 @@ export const ImageText = styled.div`
     font-size: 30px;
     color: white;
     text-shadow: 5px 5px 5px #000000;
+    padding-left: 15px;
+    padding-right: 15px;
 `

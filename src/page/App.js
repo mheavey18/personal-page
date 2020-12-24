@@ -57,7 +57,8 @@ export const App = () => {
                     <Content>
                         I am currently located in Washington, D.C. working as a full-stack engineer at
                         <StyledLink href="https://quorum.us"> Quorum</StyledLink>.
-                        I graduated from Harvard in 2020 with a degree in computer science with a minor in government. I enjoy aerial photography, 
+                        I graduated from Harvard in 2020 with a degree in computer science with a minor in government. I enjoy
+                        <StyledLink href="https://www.over-view.com/daily"> aerial photography</StyledLink>,
                         sports, politics, and building things.
                     </Content>
                 </ContentWrapper>

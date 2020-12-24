@@ -2,9 +2,9 @@ import clouds from "../images/clouds.jpg"
 import algae from "../images/algae.jpg"
 import foliage from "../images/foliage.jpg"
 import dunes from "../images/dunes.jpg"
-import paris from "../images/paris.jpg"
-import paris2 from "../images/paris2.jpg"
-import nyc from "../images/nyc.jpg"
+// import paris from "../images/paris.jpg"
+// import paris2 from "../images/paris2.jpg"
+// import nyc from "../images/nyc.jpg"
 
 
 export const themes = {
@@ -24,14 +24,14 @@ export const themes = {
         contentColor: "white",
         footerColor: "black",
     },
-    3: {
-        name: "city",
-        image1: nyc,
-        image2: paris2,
-        headerColor: "white",
-        contentColor: "white",
-        footerColor: "black",
-    }
+    // 3: {
+    //     name: "city",
+    //     image1: nyc,
+    //     image2: paris2,
+    //     headerColor: "white",
+    //     contentColor: "white",
+    //     footerColor: "black",
+    // }
 }
 
 export default themes
