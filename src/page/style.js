@@ -39,6 +39,22 @@ export const ImageSection = styled.div`
     background-image: url(${props => props.image});
 `
 
+export const BlurCover = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: ${props => props.blur
+        ? "blur(10px);"
+        : "none;"
+    }
+    transition: ${props => props.blur
+        ? "none;"
+        : "filter 0.3s ease-out;"
+    }
+`
+
 export const Portrait = styled.img`
     max-height: 200px;
     max-width: 200px;
@@ -52,6 +68,7 @@ export const HeaderText = styled.div`
     font-size: 45px;
     color: white;
     text-shadow: 2px 2px 4px #000000;
+    backdrop-filter: none;
 `
 
 export const ContentWrapper = styled.div`

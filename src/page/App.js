@@ -18,7 +18,6 @@ import {
     HeaderText,
     ContentWrapper,
     ContactSectionWrapper,
-    ImageSection,
     Portrait,
     Content,
     ContactWrapper,
@@ -26,6 +25,7 @@ import {
     StyledIcon,
     ImageText,
 } from "./style.js"
+import BlurredUpImage from "../BlurredUpImage"
 
 import DropdownMenu from "../dropdown"
 import themes from "./themes"
@@ -47,11 +47,11 @@ export const App = () => {
                     </Link>
                     <DropdownMenu setTheme={setTheme}/>
                 </NavigationBar>
-                <ImageSection image={theme.image1}>
+                <BlurredUpImage smallImage={theme.image1Mini} largeImage={theme.image1}>
                     <HeaderText>
                         Hi I'm Marty.
                     </HeaderText>
-                </ImageSection>
+                </BlurredUpImage>
                 <ContentWrapper id="aboutme">
                     <Portrait src={portrait} />
                     <Content>
@@ -62,11 +62,11 @@ export const App = () => {
                         sports, politics, and building things.
                     </Content>
                 </ContentWrapper>
-                <ImageSection image={theme.image2}>
+                <BlurredUpImage smallImage={theme.image2Mini} largeImage={theme.image2}>
                     <ImageText>
                         Try refreshing the page or choosing a theme from the drop-down at the top of the page.
                     </ImageText>
-                </ImageSection>
+                </BlurredUpImage>
                 <ContactSectionWrapper id="contactinfo">
                     <ContactWrapper>
                         {"GitHub: "}
