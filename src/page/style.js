@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    ${props => `font-family: ${props.theme.primaryFont};`}
 `
 
 export const NavigationBar = styled.div`
@@ -69,6 +70,7 @@ export const HeaderText = styled.div`
     color: white;
     text-shadow: 2px 2px 4px #000000;
     backdrop-filter: none;
+    ${props => `font-family: ${props.theme.headerFont};`}
 `
 
 export const ContentWrapper = styled.div`
@@ -84,6 +86,7 @@ export const ContentWrapper = styled.div`
 
 export const Content = styled.div`
     font-size: 20px;
+    ${props => `font-family: ${props.theme.contentFont};`}
 `
 
 export const ContactSectionWrapper = styled.div`

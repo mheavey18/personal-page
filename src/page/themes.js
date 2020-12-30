@@ -18,6 +18,9 @@ export const themes = {
         headerColor: "#91f2ff",
         contentColor: "white",
         footerColor: "#3102a8",
+        primaryFont: "'American Typewriter', serif",
+        headerFont: "'American Typewriter', serif",
+        contentFont: "'Trebuchet MS', sans-serif",
     },
     2: {
         name: "land",
@@ -28,6 +31,9 @@ export const themes = {
         headerColor: "white",
         contentColor: "white",
         footerColor: "black",
+        primaryFont: "'Arial', sans-serif",
+        headerFont: "'Arial', sans-serif",
+        contentFont: "'Arial', sans-serif",
     },
 }
 
