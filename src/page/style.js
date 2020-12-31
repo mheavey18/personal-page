@@ -19,11 +19,12 @@ export const Link = styled.a`
     padding: 15px;
     margin-right: 15px;
     border-radius: 5px;
-    color: black;
     text-decoration: none;
+    ${props => `color: ${props.theme.headerFontColor};`}
     &:hover {
         background-color: black;
         color: white;
+        ${props => `background-color: ${props.theme.highlightColor};`}
     }
 `
 
@@ -64,6 +65,7 @@ export const Portrait = styled.img`
     margin-bottom: 50px;
 `
 
+// this should be renamed
 export const HeaderText = styled.div`
     text-align: center;
     font-size: 45px;
@@ -80,7 +82,7 @@ export const ContentWrapper = styled.div`
     padding: 50px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #383838;
+    ${props => `color: ${props.theme.contentFontColor};`}
     ${props => `background-color: ${props.theme.contentColor};`}
 `
 
@@ -94,7 +96,7 @@ export const ContactSectionWrapper = styled.div`
     justify-content: space-around;
     padding: 20px;
     ${props => `background-color: ${props.theme.footerColor};`}
-    color: white;
+    ${props => `color: ${props.theme.footerFontColor};`}
 `
 
 export const ContactWrapper = styled.div`
@@ -109,9 +111,7 @@ export const StyledLink = styled.a`
     }
 `
 
-export const StyledIcon = styled(FontAwesomeIcon)`
-
-`
+export const StyledIcon = styled(FontAwesomeIcon)``
 
 export const ImageText = styled.div`
     text-align: center;

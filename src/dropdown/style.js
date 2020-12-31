@@ -8,16 +8,15 @@ export const MenuTrigger = styled.div`
     padding: 15px;
     margin-right: 15px;
     border-radius: 5px;
-    color: black;
     text-decoration: none;
+    ${props => `color: ${props.theme.headerFontColor};`}
     &:hover {
-        background-color: black;
         color: white;
+        ${props => `background-color: ${props.theme.highlightColor};`}
     }
 `
 
 export const Menu = styled.nav`
-    background: #ffffff;
     border-radius: 5px;
     position: absolute;
     width: 100px;
@@ -26,6 +25,7 @@ export const Menu = styled.nav`
     visibility: hidden;
     transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    ${props => `background-color: ${props.theme.highlightColor};`}
     ${props => props.isActive && `
         opacity: 1;
         visibility: visible;
@@ -37,16 +37,17 @@ export const UnorderedList = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
-    ${props => `background-color: ${props.theme.headerColor};`}
     border-radius: 5px;
+    ${props => `background-color: ${props.theme.headerColor};`}
+    ${props => `color: ${props.theme.headerFontColor};`}
 `
 
 export const ListItem = styled.li`
     padding: 10px;
     border-radius: 5px;
     &:hover {
-        background-color: black;
-        color: white;
         cursor: pointer;
+        color: white;
+        ${props => `background-color: ${props.theme.highlightColor};`}
     }
 `
