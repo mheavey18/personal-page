@@ -5,24 +5,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export const PageWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    ${props => `font-family: ${props.theme.primaryFont};`}
 `
 
 export const NavigationBar = styled.div`
     top: 0px;
     display: flex;
-    padding: 10px;
-    ${props => `background-color: ${props.theme.headerColor};`}
+    width: 100%;
+    ${props => `padding: ${props.theme.headerPadding};`}
+    ${props => `background-color: ${props.theme.navBarColor};`}
+    ${props => `position: ${props.theme.navBarPosition};`}
 `
 
 export const Link = styled.a`
     padding: 15px;
     margin-right: 15px;
     border-radius: 5px;
-    color: black;
     text-decoration: none;
+    ${props => `color: ${props.theme.navBarFontColor};`}
+    ${props => `margin-right: ${props.theme.linkMarginRight};`}
+    ${props => `border-radius: ${props.theme.linkBorderRadius};`}
     &:hover {
         background-color: black;
         color: white;
+        ${props => `background-color: ${props.theme.highlightColor};`}
     }
 `
 
@@ -69,6 +75,13 @@ export const HeaderText = styled.div`
     color: white;
     text-shadow: 2px 2px 4px #000000;
     backdrop-filter: none;
+    ${props => `font-family: ${props.theme.headerFont};`}
+    ${props => `
+        border-radius: ${props.theme.headerTextBorderRadius};
+        backdrop-filter: ${props.theme.headerTextBackgroundFilter};
+        padding: ${props.theme.headerTextPadding};
+        text-shadow: ${props.theme.headerTextShadow};
+    `}
 `
 
 export const ContentWrapper = styled.div`
@@ -78,12 +91,13 @@ export const ContentWrapper = styled.div`
     padding: 50px;
     padding-left: 80px;
     padding-right: 80px;
-    color: #383838;
+    ${props => `color: ${props.theme.contentFontColor};`}
     ${props => `background-color: ${props.theme.contentColor};`}
 `
 
 export const Content = styled.div`
     font-size: 20px;
+    ${props => `font-family: ${props.theme.contentFont};`}
 `
 
 export const ContactSectionWrapper = styled.div`
@@ -91,7 +105,7 @@ export const ContactSectionWrapper = styled.div`
     justify-content: space-around;
     padding: 20px;
     ${props => `background-color: ${props.theme.footerColor};`}
-    color: white;
+    ${props => `color: ${props.theme.footerFontColor};`}
 `
 
 export const ContactWrapper = styled.div`
@@ -106,15 +120,12 @@ export const StyledLink = styled.a`
     }
 `
 
-export const StyledIcon = styled(FontAwesomeIcon)`
-
-`
+export const StyledIcon = styled(FontAwesomeIcon)``
 
 export const ImageText = styled.div`
     text-align: center;
     font-size: 30px;
     color: white;
-    text-shadow: 5px 5px 5px #000000;
     padding-left: 15px;
     padding-right: 15px;
 `
