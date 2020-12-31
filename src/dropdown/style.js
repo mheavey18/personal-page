@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const MenuContainer = styled.div`
     display: flex;
     align-items: center;
+    z-index: 100;
 `
 
 export const MenuTrigger = styled.div`

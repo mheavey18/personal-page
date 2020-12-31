@@ -58,6 +58,7 @@ export const ImageSection = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(${props => props.image});
+    z-index: -1;
 `
 
 export const BlurCover = styled.div`
@@ -74,6 +75,7 @@ export const BlurCover = styled.div`
         ? "none;"
         : "filter 0.3s ease-out;"
     }
+    z-index: 0;
 `
 
 export const Portrait = styled.img`
