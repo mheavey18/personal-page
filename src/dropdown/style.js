@@ -1,17 +1,24 @@
 import styled from 'styled-components'
 
 export const MenuContainer = styled.div`
-    position: relative;
+    display: flex;
+    align-items: center;
 `
 
 export const MenuTrigger = styled.div`
-    padding: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-right: 15px;
     border-radius: 5px;
     text-decoration: none;
-    ${props => `border-radius: ${props.theme.linkBorderRadius};`}
     ${props => `color: ${props.theme.navBarFontColor};`}
+    ${props => `margin-right: ${props.theme.linkMarginRight};`}
+    ${props => `border-radius: ${props.theme.linkBorderRadius};`}
     &:hover {
+        background-color: black;
         color: white;
         ${props => `background-color: ${props.theme.highlightColor};`}
     }
@@ -31,7 +38,7 @@ export const Menu = styled.nav`
     ${props => props.isActive && `
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: translateY(85px);
     `}
 `
 

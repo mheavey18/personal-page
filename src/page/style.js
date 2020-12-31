@@ -18,6 +18,8 @@ export const NavigationBar = styled.div`
 `
 
 export const Link = styled.a`
+    display: flex;
+    align-items: center;
     padding: 15px;
     margin-right: 15px;
     border-radius: 5px;
@@ -30,6 +32,19 @@ export const Link = styled.a`
         color: white;
         ${props => `background-color: ${props.theme.highlightColor};`}
     }
+`
+
+export const Name = styled.a`
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    ${props => `color: ${props.theme.navBarFontColor};`}
+    ${props => `margin-right: ${props.theme.linkMarginRight};`}
+    ${props => `border-radius: ${props.theme.linkBorderRadius};`}
 `
 
 export const ImageSection = styled.div`

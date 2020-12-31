@@ -24,6 +24,7 @@ import {
     StyledLink,
     StyledIcon,
     ImageText,
+    Name,
 } from "./style.js"
 import BlurredUpImage from "../BlurredUpImage"
 
@@ -39,6 +40,9 @@ export const App = () => {
         <ThemeProvider theme={theme}>
             <PageWrapper>
                 <NavigationBar>
+                    <Name href="/">
+                        Marty Heavey
+                    </Name>
                     <Link href="#aboutme">
                         About Me
                     </Link>
