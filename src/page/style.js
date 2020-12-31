@@ -11,8 +11,10 @@ export const PageWrapper = styled.div`
 export const NavigationBar = styled.div`
     top: 0px;
     display: flex;
-    padding: 10px;
-    ${props => `background-color: ${props.theme.headerColor};`}
+    width: 100%;
+    ${props => `padding: ${props.theme.headerPadding};`}
+    ${props => `background-color: ${props.theme.navBarColor};`}
+    ${props => `position: ${props.theme.navBarPosition};`}
 `
 
 export const Link = styled.a`
@@ -20,7 +22,9 @@ export const Link = styled.a`
     margin-right: 15px;
     border-radius: 5px;
     text-decoration: none;
-    ${props => `color: ${props.theme.headerFontColor};`}
+    ${props => `color: ${props.theme.navBarFontColor};`}
+    ${props => `margin-right: ${props.theme.linkMarginRight};`}
+    ${props => `border-radius: ${props.theme.linkBorderRadius};`}
     &:hover {
         background-color: black;
         color: white;
@@ -65,7 +69,6 @@ export const Portrait = styled.img`
     margin-bottom: 50px;
 `
 
-// this should be renamed
 export const HeaderText = styled.div`
     text-align: center;
     font-size: 45px;
@@ -73,6 +76,12 @@ export const HeaderText = styled.div`
     text-shadow: 2px 2px 4px #000000;
     backdrop-filter: none;
     ${props => `font-family: ${props.theme.headerFont};`}
+    ${props => `
+        border-radius: ${props.theme.headerTextBorderRadius};
+        backdrop-filter: ${props.theme.headerTextBackgroundFilter};
+        padding: ${props.theme.headerTextPadding};
+        text-shadow: ${props.theme.headerTextShadow};
+    `}
 `
 
 export const ContentWrapper = styled.div`
@@ -117,7 +126,6 @@ export const ImageText = styled.div`
     text-align: center;
     font-size: 30px;
     color: white;
-    text-shadow: 5px 5px 5px #000000;
     padding-left: 15px;
     padding-right: 15px;
 `
