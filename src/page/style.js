@@ -126,6 +126,12 @@ export const ImageText = styled.div`
     text-align: center;
     font-size: 30px;
     color: white;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    ${props => `
+        border-radius: ${props.theme.headerTextBorderRadius};
+        backdrop-filter: ${props.theme.headerTextBackgroundFilter};
+        padding: ${props.theme.headerTextPadding};
+        text-shadow: ${props.theme.headerTextShadow};
+    `}
 `
