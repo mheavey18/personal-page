@@ -11,10 +11,13 @@ export const PageWrapper = styled.div`
 export const NavigationBar = styled.div`
     top: 0px;
     display: flex;
-    width: 100%;
     ${props => `padding: ${props.theme.headerPadding};`}
     ${props => `background-color: ${props.theme.navBarColor};`}
     ${props => `position: ${props.theme.navBarPosition};`}
+    ${props => `width: ${props.theme.navBarWidth};`}
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 `
 
 export const Link = styled.a`
@@ -106,10 +109,19 @@ export const ContactSectionWrapper = styled.div`
     padding: 20px;
     ${props => `background-color: ${props.theme.footerColor};`}
     ${props => `color: ${props.theme.footerFontColor};`}
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 `
 
 export const ContactWrapper = styled.div`
     text-align: center;
+    @media only screen and (max-width: 600px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        font-size: 20px;
+    }
 `
 
 export const StyledLink = styled.a`

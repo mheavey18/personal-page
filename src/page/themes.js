@@ -55,6 +55,7 @@ export const themes = {
         linkMarginRight: "0px",
         linkBorderRadius: "0px",
         navBarPosition: "fixed",
+        navBarWidth: "100%",
     },
     3: {
         name: "Dark",
@@ -74,6 +75,24 @@ export const themes = {
         contentFont: "'Arial', sans-serif",
         headerPadding: "10px",
     },
+    4: {
+        name: "mobile",
+        image1: stars,
+        image1Mini: starsMini,
+        image2: astronaut,
+        image2Mini: astronautMini,
+        navBarColor: "black",
+        contentColor: "black",
+        footerColor: "black",
+        highlightColor: "#0014ff",
+        navBarFontColor: "white",
+        contentFontColor: "white",
+        footerFontColor: "white",
+        primaryFont: "'Arial', sans-serif",
+        headerFont: "'Arial', sans-serif",
+        contentFont: "'Arial', sans-serif",
+        headerPadding: "10px",
+    }
 }
 
 export default themes

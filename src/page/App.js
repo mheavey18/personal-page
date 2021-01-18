@@ -32,7 +32,12 @@ import themes from "./themes"
 import portrait from "../images/square_crop.jpg"
 
 export const App = () => {
-    const initialTheme = themes[Math.floor((Math.random() * Object.keys(themes).length) + 1)]
+    const isMobile = window.innerWidth < 600
+    const initialTheme = (
+        isMobile
+            ? themes[4]
+            : themes[Math.floor((Math.random() * Object.keys(themes).length) + 1)]
+    )
     const [theme, setTheme] = useState(initialTheme)
 
     return (
@@ -62,11 +67,15 @@ export const App = () => {
                         sports, politics, and building things.
                     </Content>
                 </ContentWrapper>
-                <BlurredUpImage smallImage={theme.image2Mini} largeImage={theme.image2}>
-                    <ImageText>
-                        Try refreshing the page or choosing a theme from the drop-down at the top of the page.
-                    </ImageText>
-                </BlurredUpImage>
+                {
+                    !isMobile && (
+                        <BlurredUpImage smallImage={theme.image2Mini} largeImage={theme.image2}>
+                            <ImageText>
+                                Try refreshing the page or choosing a theme from the drop-down at the top of the page.
+                            </ImageText>
+                        </BlurredUpImage>
+                    )
+                }
                 <ContactSectionWrapper id="contactinfo">
                     <ContactWrapper>
                         {"GitHub: "}
