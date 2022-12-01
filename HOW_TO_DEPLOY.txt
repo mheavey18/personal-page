@@ -1,0 +1,8 @@
+1. make changes you want to make
+you can use `npm run start` to see changes locally
+2. use `npm run build` to create build/ folder
+3. delete docs/ folder
+4. change name of build/ folder to docs/ folder
+5. push changes
+6. check in github setting that deployment worked
+settings > pages
