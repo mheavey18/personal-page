@@ -24,11 +24,26 @@ import {
     StyledLink,
     StyledIcon,
     ImageText,
+    Section,
+    SectionTitle,
+    ProjectGrid,
+    ProjectCard,
+    ProjectName,
+    ProjectDescription,
+    TagRow,
+    Tag,
+    ProjectLinkButton,
+    ExperienceList,
+    ExperienceHeader,
+    ExperienceRole,
+    ExperienceMeta,
+    ExperienceSummary,
 } from "./style.js"
 import BlurredUpImage from "../BlurredUpImage"
 
 import DropdownMenu from "../dropdown"
 import themes from "./themes"
+import { projects, experience } from "./content"
 import portrait from "../images/square_crop.jpg"
 
 export const App = () => {
@@ -47,8 +62,14 @@ export const App = () => {
                     <Link href="#aboutme">
                         About Me
                     </Link>
+                    <Link href="#projects">
+                        Projects
+                    </Link>
+                    <Link href="#experience">
+                        Experience
+                    </Link>
                     <Link href="#contactinfo">
-                        Contact Info
+                        Contact
                     </Link>
                     <DropdownMenu setTheme={setTheme}/>
                 </NavigationBar>
@@ -60,12 +81,42 @@ export const App = () => {
                 <ContentWrapper id="aboutme">
                     <Portrait src={portrait} />
                     <Content>
-                        I am currently located in San Francisco, CA working as a software engineer at Google.
-                        I graduated from Harvard in 2020 with a degree in computer science with a minor in government. I enjoy
+                        I'm a software engineer at Google, currently in London on the
+                        Android Developer Velocity team, where I build tools that make
+                        Android development faster. Before that I spent three years in
+                        San Francisco building
+                        <StyledLink href="https://wearos.google.com/"> Google Wallet </StyledLink>
+                        for smartwatches. I graduated from Harvard in 2020 with a degree
+                        in computer science and a minor in government. I enjoy
                         <StyledLink href="https://www.over-view.com/daily"> aerial photography</StyledLink>,
-                        sports, politics, and building things.
+                        sports, politics, and building things — like
+                        <StyledLink href="https://quickqtrivia.com"> QuickQ</StyledLink>,
+                        a quiz-bowl-style daily trivia game.
                     </Content>
                 </ContentWrapper>
+                <Section id="projects">
+                    <SectionTitle>Projects</SectionTitle>
+                    <ProjectGrid>
+                        {projects.map(project => (
+                            <ProjectCard key={project.name}>
+                                <ProjectName>{project.name}</ProjectName>
+                                <ProjectDescription>{project.description}</ProjectDescription>
+                                <TagRow>
+                                    {project.tags.map(tag => (
+                                        <Tag key={tag}>{tag}</Tag>
+                                    ))}
+                                </TagRow>
+                                {
+                                    project.link && (
+                                        <ProjectLinkButton href={project.link}>
+                                            {project.linkText}
+                                        </ProjectLinkButton>
+                                    )
+                                }
+                            </ProjectCard>
+                        ))}
+                    </ProjectGrid>
+                </Section>
                 {
                     !isMobile && (
                         <BlurredUpImage smallImage={theme.image2Mini} largeImage={theme.image2}>
@@ -75,6 +126,23 @@ export const App = () => {
                         </BlurredUpImage>
                     )
                 }
+                <Section id="experience">
+                    <SectionTitle>Experience</SectionTitle>
+                    <ExperienceList>
+                        {experience.map(job => (
+                            <div key={job.role + job.dates}>
+                                <ExperienceHeader>
+                                    <ExperienceRole>{job.role}</ExperienceRole>
+                                    <ExperienceMeta>{job.dates}</ExperienceMeta>
+                                </ExperienceHeader>
+                                <ExperienceMeta>
+                                    {job.team} · {job.location}
+                                </ExperienceMeta>
+                                <ExperienceSummary>{job.summary}</ExperienceSummary>
+                            </div>
+                        ))}
+                    </ExperienceList>
+                </Section>
                 <ContactSectionWrapper id="contactinfo">
                     <ContactWrapper>
                         {"GitHub: "}

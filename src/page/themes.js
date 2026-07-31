@@ -15,6 +15,9 @@ import astronautMini from "../images/astronaut_mini.jpg"
 export const themes = {
     1: {
         name: "Relaxed",
+        cardColor: "#ffffff",
+        cardBorderColor: "#d9d9d9",
+        accentColor: "#3102a8",
         image1: clouds,
         image1Mini: cloudsMini,
         image2: algae,
@@ -37,6 +40,9 @@ export const themes = {
     },
     2: {
         name: "Sharp",
+        cardColor: "#ffffff",
+        cardBorderColor: "#000000",
+        accentColor: "#000000",
         image1: foliage,
         image1Mini: foliageMini,
         image2: dunes,
@@ -59,6 +65,9 @@ export const themes = {
     },
     3: {
         name: "Dark",
+        cardColor: "#141414",
+        cardBorderColor: "#3a3a3a",
+        accentColor: "#3d4cff",
         image1: stars,
         image1Mini: starsMini,
         image2: astronaut,
@@ -77,6 +86,9 @@ export const themes = {
     },
     4: {
         name: "mobile",
+        cardColor: "#141414",
+        cardBorderColor: "#3a3a3a",
+        accentColor: "#3d4cff",
         image1: stars,
         image1Mini: starsMini,
         image2: astronaut,

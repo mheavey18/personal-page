@@ -141,3 +141,108 @@ export const ImageText = styled.div`
     padding-left: 15px;
     padding-right: 15px;
 `
+
+export const Section = styled.div`
+    padding: 50px 80px;
+    ${props => `color: ${props.theme.contentFontColor};`}
+    ${props => `background-color: ${props.theme.contentColor};`}
+    @media only screen and (max-width: 600px) {
+        padding: 30px 20px;
+    }
+`
+
+export const SectionTitle = styled.h2`
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    ${props => `font-family: ${props.theme.headerFont};`}
+`
+
+export const ProjectGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+`
+
+export const ProjectCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 10px;
+    ${props => `background-color: ${props.theme.cardColor};`}
+    ${props => `border: 1px solid ${props.theme.cardBorderColor};`}
+`
+
+export const ProjectName = styled.div`
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    ${props => `font-family: ${props.theme.headerFont};`}
+`
+
+export const ProjectDescription = styled.div`
+    font-size: 17px;
+    line-height: 1.5;
+    flex-grow: 1;
+    ${props => `font-family: ${props.theme.contentFont};`}
+`
+
+export const TagRow = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+`
+
+export const Tag = styled.span`
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    ${props => `border: 1px solid ${props.theme.cardBorderColor};`}
+`
+
+export const ProjectLinkButton = styled.a`
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    ${props => `background-color: ${props.theme.accentColor};`}
+    &:hover {
+        opacity: 0.85;
+    }
+`
+
+export const ExperienceList = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    ${props => `font-family: ${props.theme.contentFont};`}
+`
+
+export const ExperienceHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+`
+
+export const ExperienceRole = styled.div`
+    font-size: 19px;
+    font-weight: bold;
+`
+
+export const ExperienceMeta = styled.div`
+    font-size: 15px;
+    opacity: 0.75;
+`
+
+export const ExperienceSummary = styled.div`
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 6px;
+`

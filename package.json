@@ -18,6 +18,11 @@
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
+  "overrides": {
+    "postcss-safe-parser": {
+      "postcss": "8.4.31"
+    }
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d build",
